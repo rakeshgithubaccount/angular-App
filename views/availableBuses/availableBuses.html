@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+   <body ng-app="myApp">
+       <div ng-controller="ShowAvailableBuses">
+           <br/>
+                  <label>Search Results</label>
+                  <br/>
+                  <table class="table">
+                     <thead>
+                        <tr>
+                           <th>Bus Service</th>
+                           <th>Source</th>
+                           <th>Destination</th>
+                           <th>Timing</th>
+                           <th>No. Of Seats Available</th>
+                        </tr>
+                     </thead>
+                     <tr ng-repeat="x in listOfBuses" >
+                        <td>{{ x.name }}</td>
+                        <td>{{ x.source }}</td>
+                        <td>{{ x.destination }}</td>
+                        <td>{{ x.time }}</td>
+                        <td>{{ x.seatsAvail }}</td>
+                        <td><button type="button" class="btn btn-success" ng-click=book(x)>Book</button></td>
+                     </tr>
+                  </table>
+       </div>
+    </body>
+</html>

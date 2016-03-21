@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="ISO-8859-1">
+      <title>Banking System</title>
+      <link href="style/bootstrap.min.css" rel="stylesheet">
+       <link href="common/style.css" rel="stylesheet">
+      <!-- <script src="common/script.js"></script>-->
+      <script src="lib/angular.js" type="text/javascript"></script>
+      <script src="lib/angular-animate.js" type="text/javascript"></script>
+      <script src="main/modules.js"></script>
+      <script src="lib/ui-bootstrap-tpls-1.1.2.js" type="text/javascript"></script>
+      <script src="lib/angular-route.min.js"></script>
+      <script src="routing.js"></script>
+      <script src="services/commonService.js"></script>
+       <script src="directives/myDirective.js"></script>
+      <script src="views/registerAccount/registerAccount.js"></script>
+      <script src="views/login/login.js"></script>
+      <script src="views/modifyAccount/modifyAccount.js"></script>
+      <script src="views/deleteAccount/deleteAccount.js"></script>
+      <script src="views/accountBalance/accountBalance.js"></script>
+   </head>
+   <body ng-app="inventoryApp" style="padding-top:70px">    
+     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Banking System</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" ng-container="rootContainer"> 
+        <div class="row">
+            <div class="col-md-3" ng-show=visibilityStatus>
+                <p class="lead">Banking System</p>
+                <div class="list-group">
+                     <a href="#/register" class="list-group-item">Create Account</a>
+                    <a href="#/modifyAccount" class="list-group-item">Modify Account</a>
+                    <a href="#/accountDetails" class="list-group-item">Account Details</a>
+                    <a href="#/deleteAccount" class="list-group-item">Delete Account</a>
+                </div>
+            </div>
+            <div class="col-md-9">
+                    <div ng-view>
+                        
+                    </div>
+            </div>
+        </div>
+    </div>
+   </body>
+</html>
